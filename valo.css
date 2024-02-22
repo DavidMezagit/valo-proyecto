@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+/* Inicio de header */
+header {
+    
+    background-color: #121212;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+}
+/* Inicio de barra */
+nav {
+    display: flex;
+}
+
+.barra a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em;
+    margin: 0 0.5em;
+    position: relative;
+}
+.barra a:hover{
+    color: #b38fa1;
+    transition: 0.3s;
+}
+.barra a::after{
+    content: "";
+    background-color: #b38fa1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 100%;
+    height: 1px;
+    opacity: 0;
+}
+.barra a:hover::after{
+    opacity: 0.8;
+}
+
+
+.logo {
+    padding: 0.5em;
+    object-fit: cover;
+    height: 100%;
+}
+
+.logo img {
+    width: auto;
+    height: 2em;
+    margin-left: 1em;
+}
+/* Inicio de banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+}
+.tittle-banner{
+    position: absolute;
+    position: absolute;
+    display: flex;
+    top: 1.5em;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3em;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    position: absolute;
+}
+.border {
+    color:#341A27;  
+    text-shadow:
+       -1px -1px 0 #FF4763, 
+       1px -1px 0 #FF4763,
+       -1px 1px 0 #FF4763,
+       1px 1px 0 #FF4763;  
+}
+.wave {
+    color: #7A1C32;
+    animation: shift 3s ease-in-out infinite;
+}
+@keyframes shift {
+    0%, 100% {
+        clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Inicio de tarjetas */
+.titulo {
+    text-align: center;
+    margin: 1em;
+    font-size: 2em;
+    color: rgb(170, 169, 154);
+}
+.Article {
+ 
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+}
+.Nombre {
+    margin-bottom: 0.5em;
+    font-size: 150%;
+    color: #D5D5C7;
+}
+.Personaje {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    text-align: center;
+    align-items: center;
+}
+
+.Personaje img {
+    margin: 1em;
+    /* border: 2px solid red; */
+    width: 70%;
+    height: auto;
+    border-radius:50%;
+}
+.Descripcion {
+    /* border: 0.5px solid blue; */
+    text-align: center;
+    margin: 1em;
+    color: azure;
+    font-size: 100%;
+    max-height: 200px;
+    width: auto;
+    flex-grow: 1;
+}
